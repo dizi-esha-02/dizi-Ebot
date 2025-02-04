@@ -1,0 +1,211 @@
+/* Bot Icon */
+.bot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #d81b60; /* Base color */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Text or Icon inside the bot-icon */
+.bot-icon span {
+    font-size: 24px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Hover effect for bot-icon */
+.bot-icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+    background-color:#d81b60; /* Darker green */
+}
+
+/* Focus effect when clicked */
+.bot-icon:active {
+    transform: scale(1.05); /* Slight shrink when clicked */
+}
+
+/* Chat UI visibility control */
+#chat-ui {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    height: 500px; /* Fixed height */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+#chat-ui.visible {
+    display: flex; /* Show when toggled */
+    animation: fadeIn 0.3s ease; /* Smooth opening animation */
+}
+
+/* Animation for smooth appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header for Chat UI */
+#chat-ui h1 {
+    margin: 0;
+    padding: 15px;
+    font-size: 18px;
+    background-color:#d81b60;
+    color: white;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    font-weight: bold;
+}
+
+/* Chat UI Content */
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f7f9fc; /* Subtle background for readability */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-wrapper {
+    padding: 10px;
+    background-color: #eaf0f6;
+    border-top: 1px solid #d0d8e0;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 95%; /* Centered with some padding on the sides */
+    border-radius: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    background-color:#d81b60;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+    background-color:#d81b60;
+}
+
+/* Message Styling */
+.message {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #d81b60;
+    color: white;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #f0f2f5;
+    color: #333333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #chat-ui {
+        width: 90%; /* Adjust width for smaller screens */
+        right: 5%;
+        bottom: 20px;
+        height: auto; /* Adjust for smaller screens */
+    }
+
+    .bot-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #d81b60;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+main {
+    padding: 2rem;
+}
+.test-card {
+    background: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.test-card button {
+    background-color:#d81b60;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color:#d81b60;
+    color: white;
+}

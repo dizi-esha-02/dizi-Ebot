@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/website.css">
+</head>
+<body>
+
+    <div class="homepage">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <h1>Fashion</h1>
+            </div>
+    
+                <nav class="navbar">
+                    <ul class="nav-links">
+                        <li><button onclick="openPopup('login.html')">Login</button></li>
+                        <li><button onclick="openPopup('sighup.html')">Sign Up</button></li>
+                    </ul>
+                </nav>
+            
+        </header>
+    </div>
+    <script>
+        function openPopup(url) {
+            const width = 400;
+            const height = 500;
+            const left = (window.innerWidth - width) / 2;
+            const top = (window.innerHeight - height) / 2;
+            window.open(url, "_self", `width=${width},height=${height},top=${top},left=${left}`);
+        }
+    </script>
+    
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products..." />
+        <button type="button">Search</button>
+    </div>
+<!-- "Let's give proper work to it" -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover the Latest Trends</h2>
+            <p>Your one-stop destination for clothing, jewellery, and accessories.</p>
+            <a href="#" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="categories">
+        <!-- <h2>Shop by Category</h2> -->
+        <div class="categories">
+            <!-- Clothing Category -->
+            <div class="category">
+                <img src="https://img.freepik.com/free-photo/clothing-rack-with-floral-hawaiian-shirts-hangers-hat_23-2149366018.jpg?t=st=1737872380~exp=1737875980~hmac=fe378790b16a07d279d9fe591e32ad201d1a7ba9c154aa6c79e0e490b9830447&w=996" alt="Clothing" />
+                <h3>Clothing</h3>
+            </div>
+            <!-- Jewellery Category -->
+            <div class="category">
+                <img src="https://img.freepik.com/free-photo/traditional-indian-wedding-jewelry_8353-9762.jpg?t=st=1737725181~exp=1737728781~hmac=fad61da77fb4cfe5c309dd776340f168fadc6626400170d3892544bb436db118&w=996" alt="Jewellery" />
+                <h3>Jewellery</h3>
+            </div>
+            <!-- Accessories Category -->
+            <div class="category">
+                <img src="https://media.istockphoto.com/id/531786318/photo/top-view-of-female-fashion-accessories.jpg?s=612x612&w=0&k=20&c=kA9wOhgfDQiz7RO6GoEztqlPNGaTxZyFwf14991aMM0=" alt="Accessories" />
+                <h3>Accessories</h3>
+            </div>
+        </div>
+    </section>
+
+    <div class="category-icons">
+        <div class="icon" onclick="filterCategory('men')">
+            <img src="https://vardo.co.in/cdn/shop/files/naveenganwani_Sage_Green_Tuxedo_Wedding_Suit_for_Man_Vardo_--v__55214fa7-0d68-4b67-8eb7-1cc5fdc46521.png?v=1716803327" alt="Men">
+            <p>Men</p>
+        </div>
+        <div class="icon" onclick="filterCategory('women')">
+            <img src="https://5.imimg.com/data5/SELLER/PDFImage/2023/6/318070349/GD/ZL/QU/185234722/women-s-western-wear-photo-shoot.png" alt="Women">
+            <p>Women</p>
+        </div>
+        <div class="icon" onclick="filterCategory('kids')">
+            <img src="https://us.123rf.com/450wm/sheftsoff/sheftsoff1709/sheftsoff170904288/85622559-happy-girl-child-with-long-blond-hair-isolated-portrait.jpg?ver=6" alt="Kids">
+            <p>Kids</p>
+        </div>
+    </div>
+    <section class="shop-section">
+        <h2>Shop by Category</h2>
+        <div class="category-buttons">
+            <button onclick="filterItems('clothing')">Clothing</button>
+            <button onclick="filterItems('jewellery')">Jewellery</button>
+            <button onclick="filterItems('accessories')">Accessories</button>
+        </div>
+
+        <!-- Product Items -->
+        <div id="items-container" class="items-container">
+            <!-- Clothing Items -->
+            <div class="item clothing">
+                <img src="https://bunkari.in/cdn/shop/products/84A9801.jpg?v=1665381426" alt="Nightwear">
+                <p>Nightwear</p>
+            </div>
+            <div class="item clothing">
+                <img src="https://img.freepik.com/free-photo/people-sportswear-exercising-outdoors_23-2148965010.jpg?semt=ais_hybrid" alt="Sportswear">
+                <p>Sportswear</p>
+            </div>
+            <div class="item clothing">
+                <img src="https://perkclothing.com/cdn/shop/articles/ls_outside_1016_1200x1200_crop_center.jpg?v=1655826119" alt="Casualwear">
+                <p>Casualwear</p>
+            </div>
+            <div class="item clothing">
+                <img src="https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301005740ECRU_1_800x.jpg?v=1736226424" alt="Westernwear">
+                <p>Westernwear</p>
+            </div>
+            <div class="item clothing">
+                <img src="https://cdn.shopify.com/s/files/1/0363/2493/3763/files/1_5026be76-803f-4cdb-94d2-aba708be78e4_540x.jpg?v=1683627597" alt="Indian Wear">
+                <p>Indian Wear</p>
+            </div>
+            <div class="item clothing">
+                <img src="https://img.freepik.com/free-photo/portrait-beautiful-woman-wearing-traditional-sari-garment_23-2149565120.jpg?t=st=1737873351~exp=1737876951~hmac=17127033d9ac067ce8b7745f49551d115eef1388b61edd994f8b70a48dfd1557&w=360" alt="Indian Wear">
+                <p>Sarees</p>
+            </div>
+
+            <!-- Jewellery Items -->
+            <div class="item jewellery" style="display: none;">
+                <img src="https://images.gabrielny.com/assets/Samaya---14K-White-Gold-Fancy-Halo-Round-Diamond-Engagement-Ring~ER15278R4W44JJ-6.jpg?w=600" alt="Rings">
+                <p>Rings</p>
+            </div>
+            <div class="item jewellery" style="display: none;">
+                <img src="https://www.sydneyevan.com/cdn/shop/products/LittleLoves-Edits-0105_2cc76acb-ecee-40df-aa64-3fc5601554d5.jpg?v=1668559455" alt="Chains">
+                <p>Chains</p>
+            </div>
+            <div class="item jewellery" style="display: none;">
+                <img src="https://m.media-amazon.com/images/I/61IDG6EmjdL.AC_UY1100.jpg" alt="Earrings">
+                <p>Earrings</p>
+            </div>
+            <div class="item jewellery" style="display: none;">
+                <img src="https://d25g9z9s77rn4i.cloudfront.net/uploads/product/1029/1660833745_90759456a971ccaf6b08.jpg" alt="Bangles">
+                <p>Bangles</p>
+            </div>
+            <div class="item jewellery" style="display: none;">
+                <img src="https://aurelijewelry.com/cdn/shop/products/bracelet17_1152x.jpg?v=1670330395" alt="Bracelets">
+                <p>Bracelets</p>
+            </div>
+            <div class="item jewellery" style="display: none;">
+                <img src="https://img.freepik.com/free-photo/jewellery-foot-anklet-bracelet-bangle-background-with-place-text-banner-fashion-accessories_460848-13609.jpg?t=st=1737874055~exp=1737877655~hmac=12f1e1c3e4530fd06d64f30357a127cee64ce28b305d80806d6defb0c71e3c60&w=740" alt="Bracelets">
+                <p>Anklets</p>
+            </div>
+
+            <!-- Accessories Items -->
+            <div class="item accessories" style="display: none;">
+                <img src="https://media.istockphoto.com/id/1271796113/photo/women-is-holding-handbag-near-luxury-car.jpg?s=612x612&w=0&k=20&c=-jtXLmexNgRa-eKqA1X8UJ8QYWhW7XgDiWNmzuuCHmM=" alt="Handbags">
+                <p>Handbags</p>
+            </div>
+            <div class="item accessories" style="display: none;">
+                <img src="https://perfumedubai.com/cdn/shop/articles/dior_sauvage_460x@2x.jpg?v=1652439946" alt="Perfumes">
+                <p>Perfumes</p>
+            </div>
+            <div class="item accessories" style="display: none;">
+                <img src="https://zimsonwatches.com/cdn/shop/articles/Fossil-Blog-Image.png?v=1710996978&width=1100" alt="Watches">
+                <p>Watches</p>
+            </div>
+            <div class="item accessories" style="display: none;">
+                <img src="https://www.newleatherinn.com/cdn/shop/collections/Wallets.jpg?v=1674072278" alt="Wallets">
+                <p>Wallets</p>
+            </div>
+            <div class="item accessories" style="display: none;">
+                <img src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=pexels-nitin-creative-46710.jpg&fm=jpg" alt="Sunglasses">
+                <p>Sunglasses</p>
+            </div>
+            <div class="item accessories" style="display: none;">
+                <img src="https://img.freepik.com/free-photo/pair-trainers_144627-3800.jpg?t=st=1737874435~exp=1737878035~hmac=079bbdb55f7d03264af3ef9e15ffb783bda58fadd7850d74af7474a50507e967&w=740" alt="Sunglasses">
+                <p>Shoes</p>
+            </div>
+        </div>
+    </section>
+  
+    <section class="new-arrivals">
+        <h2>New Arrivals</h2>
+        <div class="product-row">
+          <!-- Product 1 -->
+          <div class="product">
+            <img src="https://img.freepik.com/free-photo/close-up-clock-with-time-change_23-2149241146.jpg?t=st=1738477247~exp=1738480847~hmac=d3fdc54bea8934f54c26a836f4d80be0591ab15a2c24eb147a8990eb0f0188ee&w=996" alt="Product 1">
+            <div class="product-info">
+              <h3>Stylish Watch</h3>
+              <p>Our latest collection. Limited stock!</p>
+              <div class="price">&#8377 1389</div>
+              <button>Add to Cart</button>
+              <div class="countdown">
+                Hurry! <span>Offer ends in 02:15:30</span>
+              </div>
+            </div>
+          </div>
+    
+          
+    
+          <div class="product">
+            <img src="https://img.freepik.com/free-photo/front-view-cologne-bottle-branch-rotten-wood-isolated-purple-watercolor-background_140725-144906.jpg?t=st=1738477454~exp=1738481054~hmac=a9447b3e72acc75ca88c45c0606acf462c1d2c425e73b6bfef0926e5c7cffe8c&w=996" alt="Product 2">
+            <div class="product-info">
+              <h3>Perfume</h3>
+              <p>Make Every Moment Memorable. Limited stock!</p>
+              <div class="price"> &#8377 299</div>
+              <button>Add to Cart</button>
+              <div class="countdown">
+                Hurry! <span>Offer ends in 03:30:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="https://img.freepik.com/free-photo/still-life-aesthetic-earrings_23-2149649128.jpg?t=st=1738477563~exp=1738481163~hmac=f24741cc84033d3e63090ff83dd0def4ce1122fb6253b1f015a1cfaf788b27b4&w=996" alt="Product 2">
+            <div class="product-info">
+              <h3>Beautiful Earings</h3>
+              <p>Perfect for a casual day out. Limited stock!</p>
+              <div class="price">&#8377 149</div>
+              <button>Add to Cart</button>
+              <div class="countdown">
+                Hurry! <span>Offer ends in 03:30:00</span>
+              </div>
+            </div>
+          </div>
+    
+    <div class="product">
+            <img src="https://img.freepik.com/free-photo/beautiful-young-woman-wearing-arabic-ethnic-costume-foreign-culture_482257-18699.jpg?t=st=1738477691~exp=1738481291~hmac=3c631e49d8440d7b62a5ea475d5cac5f2005078a64b3059f855344bcaccc05fd&w=996" alt="Product 2">
+            <div class="product-info">
+              <h3>Party Wear Dress</h3>
+              <p>Perfect for a casual day out or a Party. Limited stock!</p>
+              <div class="price">&#8377 999</div>
+              <button>Add to Cart</button>
+              <div class="countdown">
+                Hurry! <span>Offer ends in 03:30:00</span>
+              </div>
+            </div>
+          </div>
+          <!-- More products here -->
+        </div>
+      </section>
+
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>Discover the best deals and products tailored to your needs.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get the latest updates and offers.</p>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>Email: support@yourstore.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <!-- <div class="footer-column">
+                <h4>We Accept</h4>
+                <h4>Visa</h4>
+                <h4>Mastercard</h4>
+                <h4>PayPal</h4>
+            </div> -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fashion Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bot Icon -->
+    <div class="bot-icon" onclick="toggleChatUI()">
+        
+        <button id="chatbot-toggle"></button>
+
+    </div>
+    <!-- Chat UI -->
+    <div class="chat-ui" id="chat-ui">
+        <h1 class="chat-header">How can I assist today?</h1>
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="input-wrapper">
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your message..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const chatbotToggle = document.getElementById("chatbot-toggle");
+    const chatbot = document.getElementById("chatbot");
+
+    // Toggle chatbot visibility
+    chatbotToggle.addEventListener("click", () => {
+        chatbot.style.display = chatbot.style.display === "none" ? "flex" : "none";
+    });
+});
+
+// Filter items based on category
+function filterItems(category) {
+    const items = document.querySelectorAll(".item");
+    items.forEach(item => {
+        item.style.display = item.classList.contains(category) ? "block" : "none";
+    });
+}
+        const chatUI = document.getElementById("chat-ui");
+
+        // Toggle Chat UI visibility
+        function toggleChatUI() {
+            chatUI.classList.toggle("visible");
+        }
+
+        // Send user message and display bot response
+        async function sendMessage() {
+            const userInput = document.getElementById("user-input");
+            const message = userInput.value.trim();
+            if (!message) return;
+
+            // Add user's message to the chat box
+            const chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += `<div class="message user">${message}</div>`;
+            userInput.value = "";
+
+            // Send the message to the server
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message })
+            });
+            const data = await response.json();
+
+            // Display bot's response
+            chatBox.innerHTML += `<div class="message bot">${data.response}</div>`;
+            chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to the latest message
+        }
+    </script>
+</body>
+</html>
+<!-- done with all the originals -->
