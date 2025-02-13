@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Website</title>
-    <link rel="stylesheet" href="/static/website.css">
+    <link rel="stylesheet" href="static/website.css">
 </head>
 <body>
 <div class="homepage">
@@ -55,12 +55,12 @@
         <div class="categories">
             <!-- Clothing Category -->
             <div class="category">
-                <img src="https://img.freepik.com/free-photo/clothing-rack-with-floral-hawaiian-shirts-hangers-hat_23-2149366018.jpg?t=st=1737872380~exp=1737875980~hmac=fe378790b16a07d279d9fe591e32ad201d1a7ba9c154aa6c79e0e490b9830447&w=996" alt="Clothing" />
+                <img src="https://burst.shopifycdn.com/photos/minimalist-retail-clothing-display.jpg?width=1000&format=pjpg&exif=0&iptc=0" alt="Clothing" />
                 <h3>Clothing</h3>
             </div>
             <!-- Jewellery Category -->
             <div class="category">
-                <img src="https://img.freepik.com/free-photo/traditional-indian-wedding-jewelry_8353-9762.jpg?t=st=1737725181~exp=1737728781~hmac=fad61da77fb4cfe5c309dd776340f168fadc6626400170d3892544bb436db118&w=996" alt="Jewellery" />
+                <img src="https://blogapi.perrian.com/wp-content/uploads/2022/03/5-Must-Have-Diamond-Jewellery-Pieces-You-Cant-Ignore.jpg" alt="Jewellery" />
                 <h3>Jewellery</h3>
             </div>
             <!-- Accessories Category -->
@@ -178,134 +178,236 @@
         </div>
     </section>
 </div>
+<section class="new-arrivals">
+    <h2>New Arrivals</h2>
+    <div class="product-row">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="https://c.ndtvimg.com/2021-11/t12tt6vo_menswatches3_625x300_26_November_21.jpg" alt="Product 1">
+        <div class="product-info">
+          <h3>Stylish Watch</h3>
+          <p>Our latest collection. Limited stock!</p>
+          <div class="price">&#8377 1389</div>
+          <button>Add to Cart</button>
+          <div class="countdown">
+            Hurry! <span>Offer ends in 02:15:30</span>
+          </div>
+        </div>
+      </div>
 
-<!-- Footer Section -->
-<!-- <footer class="footer">
-    <p>&copy; 2025 Fashion. All rights reserved.</p>
-</footer> -->
-<footer class="modern-footer">
-    <div class="footer-container">
-        <div class="footer-column">
-            <h4>About Us</h4>
-            <p>Discover the best deals and products tailored to your needs.</p>
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="https://fausto.in/cdn/shop/files/FST_FJAMC-16002_WHITE_1_24e766af-66c3-4e83-929c-62155c011a5f_400x.jpg?v=1724501482" alt="Product 2">
+        <div class="product-info">
+          <h3>Comfortable Sneakers</h3>
+          <p>Perfect for a workout. Limited stock!</p>
+          <div class="price">&#8377 499</div>
+          <button>Add to Cart</button>
+          <div class="countdown">
+            Hurry! <span>Offer ends in 03:30:00</span>
+          </div>
         </div>
-        <div class="footer-column">
-            <h4>Newsletter</h4>
-            <p>Subscribe to get the latest updates and offers.</p>
-            <form>
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-        <div class="footer-column">
-            <h4>Contact</h4>
-            <p>Email: support@yourstore.com</p>
-            <p>Phone: +123 456 7890</p>
-        </div>
-        <!-- <div class="footer-column">
-            <h4>We Accept</h4>
-            <h4>Visa</h4>
-            <h4>Mastercard</h4>
-            <h4>PayPal</h4>
-        </div> -->
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Fashion Store. All Rights Reserved.</p>
-    </div>
-</footer>
+      </div>
 
-<!-- Chatbot Button -->
+      <div class="product">
+        <img src="https://images-static.naikaa.com/beauty-blog/wp-content/uploads/2024/04/perfume-banner-1.jpg" alt="Product 2">
+        <div class="product-info">
+          <h3>Perfume</h3>
+          <p>Make Every Moment Memorable. Limited stock!</p>
+          <div class="price"> &#8377 299</div>
+          <button>Add to Cart</button>
+          <div class="countdown">
+            Hurry! <span>Offer ends in 03:30:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://cdn-media.glamira.com/media/product/newgeneration/view/1/sku/lerome-e/diamond/greendiamond_A/stone2/diamond-Brillant_AAA/alloycolour/red.jpg" alt="Product 2">
+        <div class="product-info">
+          <h3>Beautiful Earings</h3>
+          <p>Perfect for a casual day out. Limited stock!</p>
+          <div class="price">&#8377 149</div>
+          <button>Add to Cart</button>
+          <div class="countdown">
+            Hurry! <span>Offer ends in 03:30:00</span>
+          </div>
+        </div>
+      </div>
+
+<div class="product">
+        <img src="https://5.imimg.com/data5/NI/HA/MY-27152441/kd-d-115-500x500.jpg" alt="Product 2">
+        <div class="product-info">
+          <h3>Party Wear Dress</h3>
+          <p>Perfect for a casual day out or a Party. Limited stock!</p>
+          <div class="price">&#8377 999</div>
+          <button>Add to Cart</button>
+          <div class="countdown">
+            Hurry! <span>Offer ends in 03:30:00</span>
+          </div>
+        </div>
+      </div>
+      <!-- More products here -->
+    </div>
+  </section>
+
+  <script>
+    // Countdown Timer Logic (example)
+    const countdowns = document.querySelectorAll('.countdown span');
+    countdowns.forEach(countdown => {
+      let endTime = new Date().getTime() + 3 * 60 * 60 * 1000; // 3 hours countdown
+      setInterval(() => {
+        let now = new Date().getTime();
+        let remainingTime = endTime - now;
+        
+        let hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        countdown.innerText = `${hours}:${minutes}:${seconds}`;
+      }, 1000);
+    });
+  </script>
+  <section class="best-sellers">
+    <h2>Best Sellers</h2>
+    <section class="product-row">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="https://i.pinimg.com/736x/66/a6/e7/66a6e7e47de270f21e57d28296be4ac7.jpg">
+        <h3>Traditional Wear</h3>
+        <p>&#8377 1299</p>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/514WYHPuqKL._SY879_.jpg" alt="Best Seller 2">
+        <h3>Sunglasses</h3>
+        <p>&#8377 699</p>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/7125697VApL._SX695_.jpg" alt="Best Seller 3">
+        <h3>Earrings</h3>
+        <p>&#8377 200</p>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="https://www.ubuy.co.in/productimg/?image=aHR0cHM6Ly9pbWFnZXMtY2RuLnVidXkuY28uaW4vNjM0MDA2ODBhMTM3ZTQzOWQ5MDFjOGFjLWZha2UtZGVzaWduZXItYmFncy12LXdvbWVucy1sdXh1cnkuanBn.jpg" alt="Best Seller 4">
+        <h3>Handbags</h3>
+        <p>&#8377 499</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://sheetalonlinefashion.in/cdn/shop/files/jybbp_512.webp?v=1711610865" alt="Best Seller 5">
+        <h3>Dresses</h3>
+        <p>&#8377 799</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Footer</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <footer class="modern-footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>About Us</h4>
+                    <p>Discover the best deals and products tailored to your needs.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get the latest updates and offers.</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <p>Email: support@yourstore.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+                <!-- <div class="footer-column">
+                    <h4>We Accept</h4>
+                    <h4>Visa</h4>
+                    <h4>Mastercard</h4>
+                    <h4>PayPal</h4>
+                </div> -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fashion Store. All Rights Reserved.</p>
+            </div>
+        </footer>
+        
+  
+   
 <!-- Chatbot Button -->
 <div class="chatbot">
     <button id="chatbot-toggle">💬</button>
     <div id="chatbot" class="chatbot-interface" style="display: none;">
         <div class="header">ChatBOT</div>
-        <div class="content">
-            <div class="message">Hello! How can I assist you today?</div>
+        <div class="content" id="chat-content">
+            <div class="message bot">Hello! How can I assist you today?</div>
         </div>
         <div class="input-container">
             <label for="file-upload" class="file-upload-symbol">
                 <i class="fas fa-paperclip"></i>
             </label>
             <input type="file" id="file-upload" style="display: none;">
-            <input type="text" placeholder="Ask me anything...">
-            <button>➤</button>
+            <input type="text" id="user-input" placeholder="Ask me anything...">
+            <button onclick="sendMessage()">➤</button>
         </div>
     </div>
 </div>
 
 <script>
-
-document.addEventListener("DOMContentLoaded", () => {
-    const chatbotToggle = document.getElementById("chatbot-toggle");
-    const chatbot = document.getElementById("chatbot");
-
-    // Toggle chatbot visibility
-    chatbotToggle.addEventListener("click", () => {
-        chatbot.style.display = chatbot.style.display === "none" ? "flex" : "none";
-    });
-});
-
-// Filter items based on category
-function filterItems(category) {
-    const items = document.querySelectorAll(".item");
-    items.forEach(item => {
-        item.style.display = item.classList.contains(category) ? "block" : "none";
-    });
-}
-
-const chatUI = document.getElementById("chat-ui");
-
-// Toggle Chat UI visibility
-function toggleChatUI() {
-    if (chatUI) {
-        chatUI.classList.toggle("visible");
-    } else {
-        console.error("Chat UI element not found!");
-    }
-}
-
-// Send user message and display bot response
-async function sendMessage() {
-    const userInput = document.getElementById("user-input");
-    const chatBox = document.getElementById("chat-box");
-
-    if (!userInput || !chatBox) {
-        console.error("Required chat elements not found!");
-        return;
-    }
-
-    const message = userInput.value.trim();
-    if (!message) return;
-
-    // Add user's message to the chat box
-    chatBox.innerHTML += `<div class="message user">${message}</div>`;
-    userInput.value = "";
-
-    try {
-        // Send the message to the server
-        const response = await fetch("/chat", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message })
+    document.addEventListener("DOMContentLoaded", () => {
+        const chatbotToggle = document.getElementById("chatbot-toggle");
+        const chatbot = document.getElementById("chatbot");
+    
+        chatbotToggle.addEventListener("click", () => {
+            chatbot.style.display = chatbot.style.display === "none" ? "flex" : "none";
         });
-
-        if (!response.ok) {
-            throw new Error(`Server responded with status ${response.status}`);
+    });
+    
+    // Function to send user message and display bot response
+    async function sendMessage() {
+        const userInput = document.getElementById("user-input");
+        const message = userInput.value.trim();
+        if (!message) return; // Prevent empty messages
+    
+        const chatContent = document.getElementById("chat-content");
+    
+        // Add user's message to the chat
+        chatContent.innerHTML += `<div class="message user">${message}</div>`;
+        userInput.value = ""; // Clear input field
+        chatContent.scrollTop = chatContent.scrollHeight; // Auto-scroll to latest message
+    
+        try {
+            // Send message to server
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message })
+            });
+            const data = await response.json();
+    
+            // Display bot's response
+            chatContent.innerHTML += `<div class="message bot">${data.response}</div>`;
+            chatContent.scrollTop = chatContent.scrollHeight; // Auto-scroll again
+        } catch (error) {
+            console.error("Error fetching bot response:", error);
+            chatContent.innerHTML += `<div class="message bot error">Oops! Something went wrong. Please try again.</div>`;
         }
-
-        const data = await response.json();
-
-        // Display bot's response
-        chatBox.innerHTML += `<div class="message bot">${data.response}</div>`;
-        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to the latest message
-    } catch (error) {
-        console.error("Error while fetching bot response:", error);
-        chatBox.innerHTML += `<div class="message bot error">Sorry, something went wrong. Please try again later.</div>`;
     }
-}
-
-</script>
-
+    </script>
 </body>
 </html>
